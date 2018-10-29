@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Adivinar</title>
+   <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.min.css">
+    <script src="bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script src="aleatorio.js"></script>
+    <style>
+		body{
+			text-align: center;
+			background-color: aliceblue; /*Establezco el color de fondo*/
+		}
+		p {
+			color: chocolate; /*Establezco el color de resultado*/
+		}
+	</style>
+</head>
+<body>
+    <h1>Adivina un número</h1>
+ 
+    <div> <!-- Creo la lista desplegable -->
+        <label for="intentos">Elige número intentos:</label>
+        <select id="intentos" > 
+            <option value="5">5 (Dificil)</option>
+            <option value="10">10 (Medio)</option>
+            <option value="15">15 (Fácil)</option>
+        </select>
+        <br/>
+        <label for="eleccion">Introduce un número entre 1-100:</label>
+        <input type="text" name="eleccion" id="eleccion">  
+        <!-- Barra input para introducir números -->
+        <br/>
+        <br/>
+        <button  value="Empezar" id="empezar" onclick="Adivinar()" >Comprobar</button> <!-- Botón que iniciar Función -->
+        <p id="respuestas"></p> <!-- zona para el resultado -->
+    </div>
+</body>
+</html>
